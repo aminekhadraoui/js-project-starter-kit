@@ -1,4 +1,4 @@
-# 🚀 Full Stack Framework Builder
+# 🚀 Full Stack Framework 
 
 > Build complete web applications with custom HTML-like tags - from UI to database!
 
