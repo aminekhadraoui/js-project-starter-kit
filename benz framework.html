@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Framework Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Full Stack Framework</h1>
+            <p class="subtitle">Create complete web applications using our custom tag system. Build frontend UI and backend logic in a unified framework!</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="panel">
+                <h2 class="panel-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    Framework Code
+                </h2>
+                <textarea id="frameworkCode" placeholder="Write your custom framework code here..."></textarea>
+                
+                <div class="example">
+                    <div class="example-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        Cart Example
+                    </div>
+                    <pre>&lt;<span class="highlight">cart</span> <span class="attr">text</span>=<span class="value">"Premium Headphones,Wireless Earbuds"</span>
+      <span class="attr">soustext</span>=<span class="value">"Noise-cancelling,True wireless"</span>
+      <span class="attr">image</span>=<span class="value">"headphones.jpg,earbuds.jpg"</span>
+      <span class="attr">direction</span>=<span class="value">"horizontal"</span>
+      <span class="attr">price</span>=<span class="value">"199.99,129.99"</span>&gt;
+&lt;/cart&gt;</pre>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <h2 class="panel-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    Tag Reference
+                </h2>
+                <div class="tags-grid">
+                    <div class="tag-card">
+                        <div class="tag-header">
+                            <div class="tag-name">&lt;repeat&gt;</div>
+                            <div class="tag-type">UI Component</div>
+                        </div>
+                        <div class="tag-desc">Repeats HTML content with unique attributes for each iteration. Supports nested elements and attribute propagation.</div>
+                        <div class="tag-example">&lt;<span class="highlight">repeat</span> <span class="attr">iteration</span>=<span class="value">"3"</span> 
+        <span class="attr">name</span>=<span class="value">"item_{n}"</span>
+        <span class="attr">class</span>=<span class="value">"card card-{n}"</span>&gt;
+    &lt;div <span class="attr">class</span>=<span class="value">"{class}"</span>&gt;
+        &lt;h3&gt;Item {n}&lt;/h3&gt;
+        &lt;input <span class="attr">name</span>=<span class="value">"{name}"</span>&gt;
+    &lt;/div&gt;
+&lt;/repeat&gt;</div>
+                    </div>
+                    
+                    <div class="tag-card">
+                        <div class="tag-header">
+                            <div class="tag-name">&lt;slider&gt;</div>
+                            <div class="tag-type">UI Component</div>
+                        </div>
+                        <div class="tag-desc">Creates an image slider/carousel with configurable options and smooth transitions.</div>
+                        <div class="tag-example">&lt;<span class="highlight">slider</span> <span class="attr">images</span>=<span class="value">"img1.jpg,img2.jpg"</span>
+        <span class="attr">interval</span>=<span class="value">"3000"</span>
+        <span class="attr">controls</span>=<span class="value">"true"</span>
+        <span class="attr">height</span>=<span class="value">"400px"</span>&gt;
+&lt;/slider&gt;</div>
+                    </div>
+                    
+                    <div class="tag-card">
+                        <div class="tag-header">
+                            <div class="tag-name">&lt;cart&gt;</div>
+                            <div class="tag-type">UI Component</div>
+                        </div>
+                        <div class="tag-desc">Creates responsive product cards with hover effects. Supports multiple cards with text, subtitles, and images.</div>
+                        <div class="tag-example">&lt;<span class="highlight">cart</span> <span class="attr">text</span>=<span class="value">"Product 1,Product 2"</span>
+        <span class="attr">soustext</span>=<span class="value">"Desc 1,Desc 2"</span>
+        <span class="attr">image</span>=<span class="value">"img1.jpg,img2.jpg"</span>
+        <span class="attr">direction</span>=<span class="value">"horizontal"</span>
+        <span class="attr">price</span>=<span class="value">"19.99,29.99"</span>&gt;
+&lt;/cart&gt;</div>
+                    </div>
+                    
+                    <div class="tag-card">
+                        <div class="tag-header">
+                            <div class="tag-name">&lt;formGroup&gt;</div>
+                            <div class="tag-type">UI Component</div>
+                        </div>
+                        <div class="tag-desc">Creates a complete form with configurable attributes. Includes optional submit button with modern styling.</div>
+                        <div class="tag-example">&lt;<span class="highlight">formGroup</span> <span class="attr">method</span>=<span class="value">"post"</span>
+        <span class="attr">action</span>=<span class="value">"/submit.php"</span>
+        <span class="attr">id</span>=<span class="value">"my-form"</span>
+        <span class="attr">class</span>=<span class="value">"custom-form"</span>
+        <span class="attr">color</span>=<span class="value">"#f72585"</span>
+        <span class="attr">button</span>=<span class="value">"on"</span>&gt;
+    &lt;!-- Inputs go here --&gt;
+&lt;/formGroup&gt;</div>
+                    </div>
+                    
+                    <div class="tag-card">
+                        <div class="tag-header">
+                            <div class="tag-name">&lt;inputGroup&gt;</div>
+                            <div class="tag-type">UI Component</div>
+                        </div>
+                        <div class="tag-desc">Generates multiple form inputs based on comma-separated attribute values. Automatically creates labels and inputs.</div>
+                        <div class="tag-example">&lt;<span class="highlight">inputGroup</span> <span class="attr">name</span>=<span class="value">"name,email"</span>
+        <span class="attr">class</span>=<span class="value">"input-field,input-field"</span>
+        <span class="attr">type</span>=<span class="value">"text,email"</span>
+        <span class="attr">id</span>=<span class="value">"name-input,email-input"</span>
+        <span class="attr">require</span>=<span class="value">"true,true"</span>&gt;
+&lt;/inputGroup&gt;</div>
+                    </div>
+                    
+                    <div class="tag-card">
+                        <div class="tag-header">
+                            <div class="tag-name">&lt;columns&gt;</div>
+                            <div class="tag-type">Backend</div>
+                        </div>
+                        <div class="tag-desc">Defines table columns with data types, constraints, and key definitions. Used within create operations.</div>
+                        <div class="tag-example">&lt;<span class="highlight">columns</span>&gt;
+    &lt;column name="id" type="int" primaryKey="true" /&gt;
+    &lt;column name="name" type="varchar" length="100" /&gt;
+&lt;/columns&gt;</div>
+                    </div>
+                    
+                    <div class="tag-card">
+                        <div class="tag-header">
+                            <div class="tag-name">&lt;operation&gt;</div>
+                            <div class="tag-type">Backend</div>
+                        </div>
+                        <div class="tag-desc">Defines CRUD operations with SQL queries and column definitions. Enhanced with column specifications.</div>
+                        <div class="tag-example">&lt;<span class="highlight">operation</span> <span class="attr">type</span>=<span class="value">"create"</span> <span class="attr">table</span>=<span class="value">"users"</span>&gt;
+    &lt;columns&gt;
+        &lt;column name="id" type="int" primaryKey="true"/&gt;
+        &lt;column name="email" type="varchar" length="255"/&gt;
+    &lt;/columns&gt;
+    INSERT INTO users (email) VALUES (:email)
+&lt;/operation&gt;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="build-btn pulse" id="buildBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Build Application
+            </button>
+            
+            <button class="start-btn pulse" id="startBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Start Application
+            </button>
+            
+            <button class="clear-btn" id="clearBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+                Clear Code
+            </button>
+        </div>
+        
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="terminal">
+                <div class="terminal-header" id="terminalHeader">Building Application...</div>
+                <div class="terminal-body" id="terminalOutput"></div>
+                <div class="progress-bar">
+                    <div class="progress" id="buildProgress"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="outputModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                        Generated Application
+                    </h2>
+                    <button class="close-modal">&times;</button>
+                </div>
+                
+                <div class="modal-tabs">
+                    <button class="tab-btn active" data-tab="html">HTML</button>
+                    <button class="tab-btn" data-tab="css">CSS</button>
+                    <button class="tab-btn" data-tab="js">JavaScript</button>
+                    <button class="tab-btn" data-tab="php">PHP</button>
+                    <button class="tab-btn" data-tab="sql">SQL</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="html-tab" class="tab-pane active">
+                        <div class="code-block" id="html-output"></div>
+                        <button class="download-btn" data-file="app.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download HTML
+                        </button>
+                    </div>
+                    
+                    <div id="css-tab" class="tab-pane">
+                        <div class="code-block" id="css-output"></div>
+                        <button class="download-btn" data-file="styles.css">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download CSS
+                        </button>
+                    </div>
+                    
+                    <div id="js-tab" class="tab-pane">
+                        <div class="code-block" id="js-output"></div>
+                        <button class="download-btn" data-file="script.js">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download JavaScript
+                        </button>
+                    </div>
+                    
+                    <div id="php-tab" class="tab-pane">
+                        <div class="code-block" id="php-output"></div>
+                        <button class="download-btn" data-file="backend.php">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download PHP
+                        </button>
+                    </div>
+                    
+                    <div id="sql-tab" class="tab-pane">
+                        <div class="code-block" id="sql-output"></div>
+                        <button class="download-btn" data-file="database.sql">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download SQL
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            Full Stack Framework Builder &copy; Amine Khadhraoui 2025 | Create any single-page application with our unique tag-based syntax
+        </footer>
+    </div>
+    
+   
+</body>
+</html>
