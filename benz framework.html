@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Framework</title>
+    <title>Full Stack Framework Builder</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
@@ -29,14 +29,55 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
-                        Cart Example
+                        Hero Example with Color Controls
                     </div>
-                    <pre>&lt;<span class="highlight">cart</span> <span class="attr">text</span>=<span class="value">"Premium Headphones,Wireless Earbuds"</span>
-      <span class="attr">soustext</span>=<span class="value">"Noise-cancelling,True wireless"</span>
-      <span class="attr">image</span>=<span class="value">"headphones.jpg,earbuds.jpg"</span>
-      <span class="attr">direction</span>=<span class="value">"horizontal"</span>
-      <span class="attr">price</span>=<span class="value">"199.99,129.99"</span>&gt;
-&lt;/cart&gt;</pre>
+                    <pre>&lt;<span class="highlight">hero</span> <span class="attr">title</span>=<span class="value">"Welcome to Our Platform"</span>
+      <span class="attr">subtitle</span>=<span class="value">"Discover amazing features"</span>
+      <span class="attr">buttonText</span>=<span class="value">"Get Started"</span>
+      <span class="attr">buttonLink</span>=<span class="value">"/signup"</span>
+      <span class="attr">bgImage</span>=<span class="value">"hero-bg.jpg"</span>
+      <span class="attr">textColor</span>=<span class="value">"#ffffff"</span>
+      <span class="attr">buttonColor</span>=<span class="value">"#4361ee"</span>
+      <span class="attr">buttonTextColor</span>=<span class="value">"#ffffff"</span>
+      <span class="attr">layout</span>=<span class="value">"center"</span>&gt;
+&lt;/hero&gt;</pre>
+                    
+                    <div class="example-title" style="margin-top: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        FormGroup Example with Customizable Text
+                    </div>
+                    <pre>&lt;<span class="highlight">formGroup</span> <span class="attr">method</span>=<span class="value">"post"</span>
+        <span class="attr">action</span>=<span class="value">"/submit.php"</span>
+        <span class="attr">id</span>=<span class="value">"my-form"</span>
+        <span class="attr">class</span>=<span class="value">"custom-form"</span>
+        <span class="attr">bgColor</span>=<span class="value">"rgba(30,32,44,0.9)"</span>
+        <span class="attr">textColor</span>=<span class="value">"#d0d7ff"</span>
+        <span class="attr">accentColor</span>=<span class="value">"#5e81f4"</span>
+        <span class="attr">buttonColor</span>=<span class="value">"#f72585"</span>
+        <span class="attr">buttonTextColor</span>=<span class="value">"#ffffff"</span>
+        <span class="attr">button</span>=<span class="value">"on"</span>
+        <span class="attr">title</span>=<span class="value">"Registration Form"</span>
+        <span class="attr">labels</span>=<span class="value">"Name,Email,Password"</span>
+        <span class="attr">placeholders</span>=<span class="value">"John,Doe,john@example.com,••••••"</span>&gt;
+    &lt;!-- Inputs go here --&gt;
+&lt;/formGroup&gt;</pre>
+                    
+                    <div class="example-title" style="margin-top: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        Slider Component Example with Custom Attributes
+                    </div>
+                    <pre>&lt;<span class="highlight">slider</span> <span class="attr">images</span>=<span class="value">"img1.jpg,img2.jpg,img3.jpg"</span>
+        <span class="attr">titles</span>=<span class="value">"First Slide|Second Slide|Third Slide"</span>
+        <span class="attr">descriptions</span>=<span class="value">"This is the first slide|This is the second slide|This is the third slide"</span>
+        <span class="attr">textBoxColors</span>=<span class="value">"#3a0ca3,#4361ee,#7209b7"</span>
+        <span class="attr">textColor</span>=<span class="value">"#ffffff"</span>
+        <span class="attr">backgroundColor</span>=<span class="value">"#1a2a6c"</span>
+        <span class="attr">animation</span>=<span class="value">"fade"</span>&gt;
+&lt;/slider&gt;</pre>
                 </div>
             </div>
             
@@ -50,45 +91,33 @@
                 <div class="tags-grid">
                     <div class="tag-card">
                         <div class="tag-header">
-                            <div class="tag-name">&lt;repeat&gt;</div>
+                            <div class="tag-name">&lt;navbar&gt;</div>
                             <div class="tag-type">UI Component</div>
                         </div>
-                        <div class="tag-desc">Repeats HTML content with unique attributes for each iteration. Supports nested elements and attribute propagation.</div>
-                        <div class="tag-example">&lt;<span class="highlight">repeat</span> <span class="attr">iteration</span>=<span class="value">"3"</span> 
-        <span class="attr">name</span>=<span class="value">"item_{n}"</span>
-        <span class="attr">class</span>=<span class="value">"card card-{n}"</span>&gt;
-    &lt;div <span class="attr">class</span>=<span class="value">"{class}"</span>&gt;
-        &lt;h3&gt;Item {n}&lt;/h3&gt;
-        &lt;input <span class="attr">name</span>=<span class="value">"{name}"</span>&gt;
-    &lt;/div&gt;
-&lt;/repeat&gt;</div>
+                        <div class="tag-desc">Creates a responsive navigation bar with comprehensive color controls.</div>
+                        <div class="tag-example">&lt;<span class="highlight">navbar</span> <span class="attr">bgColor</span>=<span class="value">"#2c3e50"</span>
+        <span class="attr">textColor</span>=<span class="value">"#ffffff"</span>
+        <span class="attr">hoverColor</span>=<span class="value">"#4cc9f0"</span>
+        <span class="attr">logo</span>=<span class="value">"logo.png"</span>
+        <span class="attr">links</span>=<span class="value">"Home,Products,About"</span>
+        <span class="attr">hrefs</span>=<span class="value">"#home,#products,#about"</span>&gt;
+&lt;/navbar&gt;</div>
                     </div>
                     
                     <div class="tag-card">
                         <div class="tag-header">
-                            <div class="tag-name">&lt;slider&gt;</div>
+                            <div class="tag-name">&lt;footer&gt;</div>
                             <div class="tag-type">UI Component</div>
                         </div>
-                        <div class="tag-desc">Creates an image slider/carousel with configurable options and smooth transitions.</div>
-                        <div class="tag-example">&lt;<span class="highlight">slider</span> <span class="attr">images</span>=<span class="value">"img1.jpg,img2.jpg"</span>
-        <span class="attr">interval</span>=<span class="value">"3000"</span>
-        <span class="attr">controls</span>=<span class="value">"true"</span>
-        <span class="attr">height</span>=<span class="value">"400px"</span>&gt;
-&lt;/slider&gt;</div>
-                    </div>
-                    
-                    <div class="tag-card">
-                        <div class="tag-header">
-                            <div class="tag-name">&lt;cart&gt;</div>
-                            <div class="tag-type">UI Component</div>
-                        </div>
-                        <div class="tag-desc">Creates responsive product cards with hover effects. Supports multiple cards with text, subtitles, and images.</div>
-                        <div class="tag-example">&lt;<span class="highlight">cart</span> <span class="attr">text</span>=<span class="value">"Product 1,Product 2"</span>
-        <span class="attr">soustext</span>=<span class="value">"Desc 1,Desc 2"</span>
-        <span class="attr">image</span>=<span class="value">"img1.jpg,img2.jpg"</span>
-        <span class="attr">direction</span>=<span class="value">"horizontal"</span>
-        <span class="attr">price</span>=<span class="value">"19.99,29.99"</span>&gt;
-&lt;/cart&gt;</div>
+                        <div class="tag-desc">Creates a modern footer with comprehensive color controls.</div>
+                        <div class="tag-example">&lt;<span class="highlight">footer</span> <span class="attr">bgColor</span>=<span class="value">"#0f2027"</span>
+        <span class="attr">textColor</span>=<span class="value">"#c0c0ff"</span>
+        <span class="attr">linkColor</span>=<span class="value">"#c0c0ff"</span>
+        <span class="attr">hoverColor</span>=<span class="value">"#ffffff"</span>
+        <span class="attr">copyright</span>=<span class="value">"2025 Company"</span>
+        <span class="attr">links</span>=<span class="value">"Privacy,Terms"</span>
+        <span class="attr">hrefs</span>=<span class="value">"/privacy,/terms"</span>&gt;
+&lt;/footer&gt;</div>
                     </div>
                     
                     <div class="tag-card">
@@ -96,56 +125,67 @@
                             <div class="tag-name">&lt;formGroup&gt;</div>
                             <div class="tag-type">UI Component</div>
                         </div>
-                        <div class="tag-desc">Creates a complete form with configurable attributes. Includes optional submit button with modern styling.</div>
-                        <div class="tag-example">&lt;<span class="highlight">formGroup</span> <span class="attr">method</span>=<span class="value">"post"</span>
-        <span class="attr">action</span>=<span class="value">"/submit.php"</span>
-        <span class="attr">id</span>=<span class="value">"my-form"</span>
-        <span class="attr">class</span>=<span class="value">"custom-form"</span>
-        <span class="attr">color</span>=<span class="value">"#f72585"</span>
-        <span class="attr">button</span>=<span class="value">"on"</span>&gt;
+                        <div class="tag-desc">Creates a complete form with comprehensive color controls and customizable text.</div>
+                        <div class="tag-example">&lt;<span class="highlight">formGroup</span> <span class="attr">bgColor</span>=<span class="value">"rgba(30,32,44,0.9)"</span>
+        <span class="attr">textColor</span>=<span class="value">"#d0d7ff"</span>
+        <span class="attr">accentColor</span>=<span class="value">"#5e81f4"</span>
+        <span class="attr">buttonColor</span>=<span class="value">"#f72585"</span>
+        <span class="attr">buttonTextColor</span>=<span class="value">"#ffffff"</span>
+        <span class="attr">title</span>=<span class="value">"Registration Form"</span>
+        <span class="attr">labels</span>=<span class="value">"Name,Email,Password"</span>
+        <span class="attr">placeholders</span>=<span class="value">"Your name,email@example.com,••••••"</span>&gt;
     &lt;!-- Inputs go here --&gt;
 &lt;/formGroup&gt;</div>
                     </div>
                     
                     <div class="tag-card">
                         <div class="tag-header">
-                            <div class="tag-name">&lt;inputGroup&gt;</div>
+                            <div class="tag-name">&lt;cart&gt;</div>
                             <div class="tag-type">UI Component</div>
                         </div>
-                        <div class="tag-desc">Generates multiple form inputs based on comma-separated attribute values. Automatically creates labels and inputs.</div>
-                        <div class="tag-example">&lt;<span class="highlight">inputGroup</span> <span class="attr">name</span>=<span class="value">"name,email"</span>
-        <span class="attr">class</span>=<span class="value">"input-field,input-field"</span>
-        <span class="attr">type</span>=<span class="value">"text,email"</span>
-        <span class="attr">id</span>=<span class="value">"name-input,email-input"</span>
-        <span class="attr">require</span>=<span class="value">"true,true"</span>&gt;
-&lt;/inputGroup&gt;</div>
+                        <div class="tag-desc">Creates responsive product cards with comprehensive color controls.</div>
+                        <div class="tag-example">&lt;<span class="highlight">cart</span> <span class="attr">text</span>=<span class="value">"Product 1,Product 2"</span>
+        <span class="attr">soustext</span>=<span class="value">"Desc 1,Desc 2"</span>
+        <span class="attr">image</span>=<span class="value">"img1.jpg,img2.jpg"</span>
+        <span class="attr">bgColor</span>=<span class="value">"rgba(255,255,255,0.1)"</span>
+        <span class="attr">textColor</span>=<span class="value">"#ffffff"</span>
+        <span class="attr">priceColor</span>=<span class="value">"#4cc9f0"</span>
+        <span class="attr">buttonColor</span>=<span class="value">"#4361ee"</span>
+        <span class="attr">buttonTextColor</span>=<span class="value">"#ffffff"</span>&gt;
+&lt;/cart&gt;</div>
                     </div>
                     
                     <div class="tag-card">
                         <div class="tag-header">
-                            <div class="tag-name">&lt;columns&gt;</div>
-                            <div class="tag-type">Backend</div>
+                            <div class="tag-name">&lt;hero&gt;</div>
+                            <div class="tag-type">UI Component</div>
                         </div>
-                        <div class="tag-desc">Defines table columns with data types, constraints, and key definitions. Used within create operations.</div>
-                        <div class="tag-example">&lt;<span class="highlight">columns</span>&gt;
-    &lt;column name="id" type="int" primaryKey="true" /&gt;
-    &lt;column name="name" type="varchar" length="100" /&gt;
-&lt;/columns&gt;</div>
+                        <div class="tag-desc">Creates a responsive hero section with comprehensive color controls.</div>
+                        <div class="tag-example">&lt;<span class="highlight">hero</span> <span class="attr">title</span>=<span class="value">"Welcome"</span>
+        <span class="attr">subtitle</span>=<span class="value">"Subtitle text"</span>
+        <span class="attr">buttonText</span>=<span class="value">"Click Me"</span>
+        <span class="attr">buttonLink</span>=<span class="value">"#"</span>
+        <span class="attr">bgImage</span>=<span class="value">"bg.jpg"</span>
+        <span class="attr">textColor</span>=<span class="value">"#fff"</span>
+        <span class="attr">buttonColor</span>=<span class="value">"#4361ee"</span>
+        <span class="attr">buttonTextColor</span>=<span class="value">"#ffffff"</span>&gt;
+&lt;/hero&gt;</div>
                     </div>
                     
                     <div class="tag-card">
                         <div class="tag-header">
-                            <div class="tag-name">&lt;operation&gt;</div>
-                            <div class="tag-type">Backend</div>
+                            <div class="tag-name">&lt;slider&gt;</div>
+                            <div class="tag-type">UI Component</div>
                         </div>
-                        <div class="tag-desc">Defines CRUD operations with SQL queries and column definitions. Enhanced with column specifications.</div>
-                        <div class="tag-example">&lt;<span class="highlight">operation</span> <span class="attr">type</span>=<span class="value">"create"</span> <span class="attr">table</span>=<span class="value">"users"</span>&gt;
-    &lt;columns&gt;
-        &lt;column name="id" type="int" primaryKey="true"/&gt;
-        &lt;column name="email" type="varchar" length="255"/&gt;
-    &lt;/columns&gt;
-    INSERT INTO users (email) VALUES (:email)
-&lt;/operation&gt;</div>
+                        <div class="tag-desc">Creates an image slider with automatic transitions and customizable styles per slide.</div>
+                        <div class="tag-example">&lt;<span class="highlight">slider</span> <span class="attr">images</span>=<span class="value">"img1.jpg,img2.jpg"</span>
+        <span class="attr">titles</span>=<span class="value">"First Slide|Second Slide"</span>
+        <span class="attr">descriptions</span>=<span class="value">"This is the first slide|This is the second slide"</span>
+        <span class="attr">textBoxColors</span>=<span class="value">"#3a0ca3,#4361ee"</span>
+        <span class="attr">textColor</span>=<span class="value">"#ffffff"</span>
+        <span class="attr">backgroundColor</span>=<span class="value">"#1a2a6c"</span>
+        <span class="attr">animation</span>=<span class="value">"fade"</span>&gt;
+&lt;/slider&gt;</div>
                     </div>
                 </div>
             </div>
@@ -261,11 +301,10 @@
         </div>
         
         <footer>
-            Full Stack Framework Builder &copy; Amine Khadhraoui 2025 | Create any single-page application with our unique tag-based syntax
+            Full Stack Framework Builder &copy; 2025 | Create any single-page application with our unique tag-based syntax
         </footer>
     </div>
     
    
 </body>
-
 </html>
